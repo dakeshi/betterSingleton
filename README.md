@@ -9,13 +9,13 @@ enum DatabaseType {
 }
 
 /*:
- ### Create micro framework
+ ### create the micro framework
  `internal` helps to use in the framework. ex) the test target
  */
 class DataManager {
 
   // Hide singleton pattern from the outside.
-  //  Do not expose unneccessary information
+  // Do not expose unneccessary information
   static let shared = DataManager()
 
   let dbType: DatabaseType
@@ -36,8 +36,8 @@ print(DataManager.shared.dbType)
 
 
 /*:
- ### create instances of itself
- You can not create an instance from the outside.
+ ### create an instance of itself
+ With `private`, it can not create an instance from the outside.
  */
 
 class Service {
@@ -53,9 +53,9 @@ Service.shared
 ```
 
 # reference
-- easy to test singleton pattern using dependency injection\
-http://www.jessesquires.com/blog/refactoring-singletons-in-swift/
-- singleton guideline\
-http://www.jessesquires.com/blog/writing-better-singletons-in-swift/\
-https://www.quora.com/Apple-Swift-programming-language-Should-I-choose-shared-instance-singletons-over-static-functions\
-https://cocoacasts.com/what-is-a-singleton-and-how-to-create-one-in-swift/
+### easy to test singleton pattern using dependency injection
+- http://www.jessesquires.com/blog/refactoring-singletons-in-swift
+### singleton guideline
+- http://www.jessesquires.com/blog/writing-better-singletons-in-swift
+- https://www.quora.com/Apple-Swift-programming-language-Should-I-choose-shared-instance-singletons-over-static-functions
+- https://cocoacasts.com/what-is-a-singleton-and-how-to-create-one-in-swift/
